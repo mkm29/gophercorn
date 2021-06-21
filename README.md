@@ -10,10 +10,17 @@ Date: 2021 Jun 20
 ![GopherCorn](media/gophergraph.jpeg)
 
 
+## Notes
 
-**Run**: `go run server.go`
+Unless you want to manually add implementation to `graph/generted/generated.go`, run the following:
 
-## Example Query/Mutation
+`go run github.com/99designs/gqlgen generate`
+
+### Run
+
+`go run server.go`
+
+### Example Query/Mutation
 
 ```javascript
 mutation createUser {

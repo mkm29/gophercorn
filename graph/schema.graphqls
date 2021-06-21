@@ -12,8 +12,16 @@ type User {
   phoneNumber: String!
 }
 
+type Comment {
+  id: ID!
+  body: String!
+  post: Post!
+  user: User!
+}
+
 type Query {
   posts: [Post!]!
+  comments: [Comment!]!
   users: [User!]!
   user(userId: ID!): User
 }
@@ -30,7 +38,14 @@ input NewUser {
   phoneNumber: String!
 }
 
+input NewComment {
+  body: String!
+  userId: String!
+  postId: String!
+}
+
 type Mutation {
   createPost(input: NewPost!): Post!
   createUser(input: NewUser!): User!
+  createComment(input: NewComment!): Comment!
 }

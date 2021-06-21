@@ -8,7 +8,9 @@ import "github.com/mkm29/gophercorn/graph/model"
 // It serves as dependency injection for your app, add any dependencies you require here.
 
 type Resolver struct {
-	posts []*model.Post
-	user  *model.User
-	users []*model.User
+	posts    []*model.Post
+	user     *model.User
+	users    []*model.User
+	comment  *model.Comment
+	comments []*model.Comment
 }

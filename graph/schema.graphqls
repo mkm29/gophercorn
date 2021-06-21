@@ -15,6 +15,7 @@ type User {
 type Query {
   posts: [Post!]!
   users: [User!]!
+  user(userId: ID!): User
 }
 
 input NewPost {

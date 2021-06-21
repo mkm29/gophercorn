@@ -53,7 +53,16 @@ query findPosts {
     }
 }
 
-query findUsers {
+query getUser {
+  user(userId:"T5577006791947779410") {
+    id
+    name
+    address
+    phoneNumber
+  }
+}
+
+query getUsers {
   users {
     id
     name

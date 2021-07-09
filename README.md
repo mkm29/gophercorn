@@ -16,9 +16,20 @@ Unless you want to manually add implementation to `graph/generted/generated.go`,
 
 `go run github.com/99designs/gqlgen generate`
 
-### Run
+## Run
 
-`go run server.go`
+You can run this project locally using the following command: `go run server.go`
+
+### Docker
+
+It is recommended that you run this application using the provided multi-stage Docker file:
+
+```shell
+docker build -t gophercorn:0.1.0 .
+docker run -p 8080:8080 -d gophercorn:0.1.0
+```
+
+Using either approach the application is now accessible at: `http://localhost:8080/`
 
 ### Example Query/Mutation
 
